@@ -1,0 +1,8 @@
+# Probe: does a Forgejo pull mirror sync fire push workflows? No runner serves
+# this label, so a queued run is the whole answer.
+on: push
+jobs:
+  probe:
+    runs-on: mirror-probe-no-runner
+    steps:
+      - run: echo probe
